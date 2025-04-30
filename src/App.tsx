@@ -12,6 +12,7 @@ import Artists from "./pages/Artists";
 import RecentlyPlayed from "./pages/RecentlyPlayed";
 import Profile from "./pages/Profile";
 import CreatePlaylist from "./pages/CreatePlaylist";
+import RateUs from "./pages/RateUs";
 import UploadSong from "./pages/UploadSong";
 import { Layout } from "./components/Layout";
 
@@ -36,6 +37,8 @@ const App = () => (
             <Route path="/profile" element={<Profile />} />
             <Route path="/create-playlist" element={<CreatePlaylist />} />
             <Route path="/upload-song" element={<UploadSong />} />
+            
+             <Route path="/rateus" element={<RateUs />} />
           </Route>
           
           <Route path="/login" element={<Login />} />

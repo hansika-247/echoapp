@@ -75,6 +75,12 @@ export const Sidebar = () => {
       label: "Profile",
       path: "/profile",
     },
+    {
+      icon: UserRound,
+      label: "RateUs",
+      path: "/RateUs",
+    },
+    
   ];
 
   return (

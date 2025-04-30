@@ -1,6 +1,4 @@
 import { ArtistCard } from "@/components/ArtistCard";
-
-// Mock popular artists data
 const popularArtists = [
   {
     id: "1",
