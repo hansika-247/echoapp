@@ -78,11 +78,19 @@ export const Sidebar = () => {
       path: "/profile",
     },
     {
+
+      icon: UserRound,
+      label: "RateUs",
+      path: "/RateUs",
+    },
+    
+
       icon: Sparkles,
       label: "Features",
       path: "/features",
     },
    
+
   ];
 
   return (
