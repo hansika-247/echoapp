@@ -24,10 +24,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          {/* Redirect root to login page */}
+          
           <Route path="/" element={<Navigate to="/login" replace />} />
           
-          {/* Protected routes that require authentication */}
           <Route element={<Layout />}>
             <Route path="/home" element={<Index />} />
             <Route path="/search" element={<Search />} />
@@ -39,7 +38,6 @@ const App = () => (
             <Route path="/upload-song" element={<UploadSong />} />
           </Route>
           
-          {/* Public routes */}
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -12,7 +12,7 @@ const CreatePlaylist = () => {
   const [coverImage, setCoverImage] = useState<string | null>(null);
   const [selectedSongs, setSelectedSongs] = useState<string[]>([]);
   
-  // Mock available songs
+
   const availableSongs = [
     { id: "1", title: "As It Was", artist: "Harry Styles", duration: "2:47" },
     { id: "2", title: "Blinding Lights", artist: "The Weeknd", duration: "3:20" },
