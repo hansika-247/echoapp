@@ -53,7 +53,7 @@ export const Sidebar = () => {
     {
       icon: Home,
       label: "Home",
-      path: "/",
+      path: "/home",
     },
     {
       icon: Search,
@@ -80,7 +80,7 @@ export const Sidebar = () => {
   return (
     <aside className="h-full w-64 bg-sidebar flex flex-col border-r border-border/50">
       <div className="px-5 py-4">
-        <Link to="/" className="flex items-center gap-x-2">
+        <Link to="/home" className="flex items-center gap-x-2">
           <div className="h-8 w-8 rounded-full echo-gradient flex items-center justify-center">
             <Music size={16} className="text-white" />
           </div>

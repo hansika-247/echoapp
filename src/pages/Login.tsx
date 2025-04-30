@@ -45,6 +45,7 @@ type SignupFormValues = z.infer<typeof signupSchema>;
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState<string>("login");
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -79,7 +80,7 @@ const Login = () => {
         title: "Login Successful",
         description: "Welcome back to Echo!",
       });
-      navigate("/");
+      navigate("/home");
     }, 1500);
   };
   
@@ -93,7 +94,7 @@ const Login = () => {
         title: "Account Created",
         description: "Welcome to Echo! Start exploring music.",
       });
-      navigate("/");
+      navigate("/home");
     }, 1500);
   };
 
@@ -109,7 +110,7 @@ const Login = () => {
         </div>
 
         <Card className="border-border/50 bg-card/70 backdrop-blur-sm shadow-lg">
-          <Tabs defaultValue="login" className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <CardHeader>
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="login">Login</TabsTrigger>
@@ -187,6 +188,18 @@ const Login = () => {
                     >
                       {isLoading ? "Logging in..." : "Login"}
                     </Button>
+                    <div className="text-center mt-2">
+                      <p className="text-sm text-muted-foreground">
+                        Don't have an account?{" "}
+                        <button
+                          type="button"
+                          onClick={() => setActiveTab("signup")}
+                          className="text-echo-purple hover:underline"
+                        >
+                          Sign up
+                        </button>
+                      </p>
+                    </div>
                   </form>
                 </Form>
               </TabsContent>
@@ -272,6 +285,18 @@ const Login = () => {
                     >
                       {isLoading ? "Creating account..." : "Create account"}
                     </Button>
+                    <div className="text-center mt-2">
+                      <p className="text-sm text-muted-foreground">
+                        Already have an account?{" "}
+                        <button
+                          type="button"
+                          onClick={() => setActiveTab("login")}
+                          className="text-echo-purple hover:underline"
+                        >
+                          Log in
+                        </button>
+                      </p>
+                    </div>
                   </form>
                 </Form>
               </TabsContent>
@@ -315,9 +340,9 @@ const Login = () => {
         </Card>
         
         <div className="text-center mt-6">
-          <Link to="/" className="group inline-flex items-center text-sm text-foreground/70 hover:text-foreground transition-colors">
+          <Link to="/home" className="group inline-flex items-center text-sm text-foreground/70 hover:text-foreground transition-colors">
             <ChevronLeft className="mr-1 h-4 w-4 group-hover:translate-x-[-2px] transition-transform" />
-            Return to Home
+            Continue to Home
           </Link>
         </div>
       </div>
