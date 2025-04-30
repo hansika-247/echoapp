@@ -1,6 +1,8 @@
 
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { Sparkles, LayoutGrid, Puzzle, Lightbulb, Settings } from "lucide-react";
+
 import {
   Home,
   Search,
@@ -76,11 +78,19 @@ export const Sidebar = () => {
       path: "/profile",
     },
     {
+
       icon: UserRound,
       label: "RateUs",
       path: "/RateUs",
     },
     
+
+      icon: Sparkles,
+      label: "Features",
+      path: "/features",
+    },
+   
+
   ];
 
   return (
