@@ -1,6 +1,6 @@
 
 import { cn } from "@/lib/utils";
-import { Play } from "lucide-react";
+import { Play, ImageOff } from "lucide-react";
 
 interface ArtistCardProps {
   artist: {
