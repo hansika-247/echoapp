@@ -1,5 +1,4 @@
-
-import { ArtistCard } from "@/components/AlbumCard";
+import { ArtistCard } from "@/components/ArtistCard";
 
 // Mock popular artists data
 const popularArtists = [
@@ -109,17 +108,7 @@ const Artists = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {popularArtists.map((artist) => (
-              <div key={artist.id} className="text-center">
-                <div className="relative mx-auto rounded-full overflow-hidden w-40 h-40 mb-3 group">
-                  <img 
-                    src={artist.image}
-                    alt={artist.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                  />
-                </div>
-                <h3 className="font-medium truncate">{artist.name}</h3>
-                <p className="text-sm text-foreground/70">Artist</p>
-              </div>
+              <ArtistCard key={artist.id} artist={artist} />
             ))}
           </div>
         </section>
@@ -133,17 +122,7 @@ const Artists = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {trendingArtists.map((artist) => (
-              <div key={artist.id} className="text-center">
-                <div className="relative mx-auto rounded-full overflow-hidden w-40 h-40 mb-3 group">
-                  <img 
-                    src={artist.image}
-                    alt={artist.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                  />
-                </div>
-                <h3 className="font-medium truncate">{artist.name}</h3>
-                <p className="text-sm text-foreground/70">Artist</p>
-              </div>
+              <ArtistCard key={artist.id} artist={artist} />
             ))}
           </div>
         </section>
