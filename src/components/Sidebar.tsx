@@ -10,6 +10,7 @@ import {
   Music,
   LogIn,
   PlusCircle,
+  Upload,
 } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -101,13 +102,28 @@ export const Sidebar = () => {
 
         <div className="mt-6 px-4">
           <div className="text-xs text-foreground/50 font-medium mb-3 uppercase">Library</div>
-          <div className="flex items-center justify-between mb-4">
+          <div className="space-y-2 px-2">
             <Link 
               to="/create-playlist" 
-              className="flex items-center gap-x-1 text-foreground/70 text-sm hover:text-foreground transition"
+              className={`flex items-center gap-x-2 py-2 px-2 rounded-lg text-sm ${
+                currentPath === '/create-playlist' 
+                  ? 'bg-echo-purple text-white' 
+                  : 'text-foreground/70 hover:text-foreground hover:bg-secondary'
+              } transition-colors`}
             >
-              <PlusCircle size={16} />
+              <PlusCircle size={18} />
               <span>Create Playlist</span>
+            </Link>
+            <Link 
+              to="/upload-song" 
+              className={`flex items-center gap-x-2 py-2 px-2 rounded-lg text-sm ${
+                currentPath === '/upload-song' 
+                  ? 'bg-echo-purple text-white' 
+                  : 'text-foreground/70 hover:text-foreground hover:bg-secondary'
+              } transition-colors`}
+            >
+              <Upload size={18} />
+              <span>Upload Song</span>
             </Link>
           </div>
         </div>

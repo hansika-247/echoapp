@@ -19,6 +19,10 @@ export const ArtistCard = ({ artist, className }: ArtistCardProps) => {
           src={artist.image} 
           alt={artist.name}
           className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+          onError={(e) => {
+            const target = e.target as HTMLImageElement;
+            target.src = "https://placehold.co/400x400/9b87f5/ffffff?text=Artist";
+          }}
         />
         <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
           <button className="h-12 w-12 rounded-full bg-echo-purple flex items-center justify-center">

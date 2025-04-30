@@ -9,6 +9,10 @@ import NotFound from "./pages/NotFound";
 import Search from "./pages/Search";
 import Login from "./pages/Login";
 import Artists from "./pages/Artists";
+import RecentlyPlayed from "./pages/RecentlyPlayed";
+import Profile from "./pages/Profile";
+import CreatePlaylist from "./pages/CreatePlaylist";
+import UploadSong from "./pages/UploadSong";
 import { Layout } from "./components/Layout";
 
 const queryClient = new QueryClient();
@@ -24,11 +28,11 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/search" element={<Search />} />
             <Route path="/artists" element={<Artists />} />
-            {/* These routes will be implemented later */}
-            <Route path="/playlists" element={<NotFound />} />
-            <Route path="/recently-played" element={<NotFound />} />
-            <Route path="/profile" element={<NotFound />} />
-            <Route path="/create-playlist" element={<NotFound />} />
+            <Route path="/playlists" element={<CreatePlaylist />} />
+            <Route path="/recently-played" element={<RecentlyPlayed />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/create-playlist" element={<CreatePlaylist />} />
+            <Route path="/upload-song" element={<UploadSong />} />
           </Route>
           
           {/* Standalone routes */}
