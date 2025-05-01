@@ -1,4 +1,6 @@
 import { ArtistCard } from "@/components/ArtistCard";
+import Footer from "../components/Footer";
+
 const popularArtists = [
   {
     id: "1",
@@ -125,6 +127,7 @@ const Artists = () => {
           </div>
         </section>
       </div>
+    
     </div>
   );
 };

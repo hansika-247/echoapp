@@ -16,6 +16,9 @@ import RateUs from "./pages/RateUs";
 import Features from "./pages/Features";
 import UploadSong from "./pages/UploadSong";
 import { Layout } from "./components/Layout";
+import ContactUsPage from './pages/ContactUsPage';
+import Footer from './components/Footer';
+
 
 const queryClient = new QueryClient();
 
@@ -38,9 +41,10 @@ const App = () => (
             <Route path="/profile" element={<Profile />} />
             <Route path="/create-playlist" element={<CreatePlaylist />} />
             <Route path="/upload-song" element={<UploadSong />} />
-
+             
              <Route path="/rateus" element={<RateUs />} />
              <Route path="/features" element={<Features />} />
+             <Route path="/contact-us" element={<ContactUsPage />} />
             
           </Route>
           
