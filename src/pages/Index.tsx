@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { AlbumCard } from "@/components/AlbumCard";
 import { ArtistCard } from "@/components/ArtistCard";
+import Footer from "../components/Footer";
 
 // Mock featured content
 const featuredAlbums = [
@@ -137,6 +138,7 @@ const Index = () => {
           </div>
         </section>
       </div>
+      <Footer/>
     </div>
   );
 };

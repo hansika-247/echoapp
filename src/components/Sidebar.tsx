@@ -84,13 +84,17 @@ export const Sidebar = () => {
       path: "/RateUs",
     },
     
-
+      {
       icon: Sparkles,
       label: "Features",
       path: "/features",
     },
-   
-
+    {
+      icon: Lightbulb,   // you can change icon if you want
+      label: "Contact Us",
+      path: "/contact-us",
+    },
+    
   ];
 
   return (
